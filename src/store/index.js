@@ -1,3 +1,6 @@
+/**
+ * 创建store 然后需要在main.js里全局注册
+ */
 import vue from 'vue';
 import vuex from 'vuex';
 import state from './state.js';

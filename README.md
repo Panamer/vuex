@@ -33,7 +33,7 @@ Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用�
     ├── index.js          # 我们组装模块并导出 store 的地方
     ├── state.js          # 跟级别的 state
     ├── getters.js        # 跟级别的 getter
-    ├── mutation-types.js # 根级别的mutations名称（官方推荐mutions方法名使用大写）
+    ├── mutation-types.js # 根级别的mutations名称（官方推荐mutations方法名使用大写）
     ├── mutations.js      # 根级别的 mutation
     ├── actions.js        # 根级别的 action
     └── modules
