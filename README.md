@@ -1,6 +1,16 @@
 # vuex
-
-vue init webpack vue-vuex
+```
+https://segmentfault.com/a/1190000014775073
+ 组件之间的数据传递:
+    父子组件间的数据传递
+    兄弟组件间的数据传递
+    非直接关联性组件间的数据传递
+解决方案：
+    1）对于深层组件嵌套中的数据传递，使用这种通信方式则需要一层一层向下prop，改变时需要一层一层向上$emit。对于兄弟组件之间的数据传递，先要向上分发，再向下prop，过于繁琐且不易监控调试
+    2）$root方式
+    3）总线Bus方式。总线Bus的思路：将事件的注册和触发单独放在一个Vue实例中，点击按钮时触发指定的事件以驱动接下来的操作。Bus总线仅仅是用来驱动事件的，具体的数据操作还是在原有的组件中
+    4）Vuex方式
+ ```
 npm install
 
 # serve with hot reload at localhost:8080
@@ -27,4 +37,15 @@ Vuex 是一个专为 Vue.js 应用程序开发的状态管理模式。它采用�
     └── modules
         ├── m1.js         # 模块1
         └── m2.js         # 模块2
+```
+```
+state (类似存储全局变量的数据)
+getters (提供用来获取state数据的方法)
+actions (提供跟后台接口打交道的方法，并调用mutations提供的方法)
+mutations (提供存储设置state数据的方法)
+
+组件Vue Component通过dispatch来调用actions提供的方法
+而actions除了可以和api打交道外，还可以通过commit来调mutations提供的方法
+最后mutaions将数据保存到state中
+当然，Vue Components还以通过getters提供的方法获取state中的数据
 ```
