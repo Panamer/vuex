@@ -1,6 +1,7 @@
 # vuex
 ```
 https://segmentfault.com/a/1190000014775073
+https://blog.csdn.net/thatway_wp/article/details/79024849
  组件之间的数据传递:
     父子组件间的数据传递
     兄弟组件间的数据传递
@@ -13,7 +14,7 @@ https://segmentfault.com/a/1190000014775073
  ```
 npm install
 
-# serve with hot reload at localhost:8080
+serve with hot reload at localhost:8080
 npm run dev
 
 vuex是什么？
