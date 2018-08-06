@@ -1,6 +1,7 @@
 # vuex
 ```
 https://segmentfault.com/a/1190000014775073
+https://blog.csdn.net/mjzhang1993/article/details/78321903
  组件之间的数据传递:
     父子组件间的数据传递
     兄弟组件间的数据传递
@@ -48,4 +49,7 @@ mutations (提供存储设置state数据的方法)
 而actions除了可以和api打交道外，还可以通过commit来调mutations提供的方法
 最后mutaions将数据保存到state中
 当然，Vue Components还以通过getters提供的方法获取state中的数据
+Vuex的状态储存是响应式的，当 Vue 组件从 store 中读取状态时，若store中的状态发生变化，那么相应的组件也会得到高效更新
+不能直接改变 store 中的状态，改变 store 中状态的唯一途径就是显式的提交（commit）mutation 这样可以更方便的跟踪状态的变化
+
 ```
