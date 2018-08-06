@@ -1,6 +1,6 @@
 const state = {
-    name: 'weish',
-    age: 22
+    name: 'mustang',
+    age: 26
 };
 
 export default state;

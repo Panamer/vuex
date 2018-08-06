@@ -1,7 +1,8 @@
 <template>
   <div class="hello">
-    <h1>{{age}}</h1>
-    <h2>Essential Links</h2>
+    <h1>{{name}}, {{age}}</h1>
+    <h2>{{other}}</h2>
+    <button @click="handleClick">commit</button>
   </div>
 </template>
 
@@ -12,17 +13,22 @@ import {mapGetters, mapMutations, mapActions} from 'vuex';
 export default {
     computed: {
         ...mapGetters([
-            name,
-            age
+            "name",
+            "age",
+            "other"
         ])
     },
     methods: {
+        handleClick() {
+          this.setName("Marry");
+          this.setAge(18);
+        },
         ...mapMutations({
             setName: 'SET_NAME',
             setAge: 'SET_AGE'
         }),
         ...mapActions([
-            nameAsyn
+            "nameAsyn"
         ])
     }
 };
