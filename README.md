@@ -51,4 +51,3 @@ mutations (提供存储设置state数据的方法)
 最后mutaions将数据保存到state中
 当然，Vue Components还以通过getters提供的方法获取state中的数据
 ```
-
