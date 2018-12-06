@@ -7,31 +7,30 @@
 </template>
 
 <script>
-import {mapGetters, mapMutations, mapActions} from 'vuex';
+  import {mapGetters, mapMutations, mapActions} from 'vuex';
 
-/* 只写组件中的script部分 */
-export default {
-    computed: {
-        ...mapGetters([
-            "name",
-            "age",
-            "other"
-        ])
-    },
-    methods: {
-        handleClick() {
-          this.setName("Marry");
-          this.setAge(18);
-        },
-        ...mapMutations({
-            setName: 'SET_NAME',
-            setAge: 'SET_AGE'
-        }),
-        ...mapActions([
-            "nameAsyn"
-        ])
-    }
-};
+  export default {
+      computed: {
+          ...mapGetters([
+              "name",
+              "age",
+              "other"
+          ])
+      },
+      methods: {
+          handleClick() {
+            this.setName("Marry");
+            this.setAge(18);
+          },
+          ...mapMutations({
+              setName: 'SET_NAME',
+              setAge: 'SET_AGE'
+          }),
+          ...mapActions([
+              "nameAsyn"
+          ])
+      }
+  };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
