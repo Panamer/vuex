@@ -35,7 +35,9 @@ export default {
           this.$router.push({
             name: 'shanghai',
             params: {
-              success: false
+              success: JSON.stringify({
+                id: 123
+              })
             }
           })
         }
