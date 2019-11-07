@@ -3,6 +3,7 @@
     <h1>{{name}}, {{age}}</h1>
     <h2>{{other}}</h2>
     <button @click="handleClick">commit</button>
+    <p @click="testQuery">去上海</p>
   </div>
 </template>
 
@@ -29,7 +30,15 @@ export default {
         }),
         ...mapActions([
             "nameAsyn"
-        ])
+        ]),
+        testQuery() {
+          this.$router.push({
+            name: 'shanghai',
+            params: {
+              success: false
+            }
+          })
+        }
     }
 };
 </script>
